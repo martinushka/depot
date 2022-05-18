@@ -1,13 +1,36 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
 one:
-  title: MyString
+  title: Book Title Version 1
   description: MyText
-  image_url: MyString
+  image_url: lorem.jpg
   price: 9.99
 
 two:
-  title: MyString
+  title: Book Title Version 2
   description: MyText
-  image_url: MyString
+  image_url: lorem.jpg
   price: 9.99
+
+ruby:
+  title: Programming Ruby 1.9
+  description:
+    Ruby is the fastest growing and most exciting dynamic
+    language out there.  If you need to get working programs
+    delivered fast, you should add Ruby to your toolbox.
+  price: 49.50
+  image_url: ruby.jpg
+
+rails:
+  title: Agile Web Development With Rails 6
+  description: Rails 6 explained in depth
+  price: 35.00
+  image_url: lorem.jpg
+
+rspec:
+  title: Testing with RSpec
+  description: Learn how to right perfect tests
+  price: 44.50
+  image_url: lorem.jpg
