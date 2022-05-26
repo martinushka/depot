@@ -26,10 +26,12 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
     @order.add_line_items_from_cart(@cart)
+
     respond_to do |format|
       if @order.save
          Cart.destroy(session[:cart_id])
          session[:cart_id] = nil
+         ChargeOrderJob.perform_later(@order,pay_type_params.to_h)
          format.html { redirect_to store_index_url, notice:
            'Thank you for your order.' }
         format.json { render :show, status: :created,
