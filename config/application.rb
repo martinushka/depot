@@ -19,6 +19,6 @@ module Depot
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
     config.middleware.use I18n::JS::Middleware
-
+    config.autoload_paths += %W(#{Rails.root}/lib)
   end
 end
